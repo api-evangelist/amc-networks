@@ -1,7 +1,12 @@
 aid: amc-networks
-url: https://raw.githubusercontent.com/api-evangelist/amc-networks/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/amc-networks/refs/heads/main/apis.yml
 modified: '2026-03-23'
 apis: []
 common:
   - type: Website
     url: https://www.amc-networks.com
+description: >-
+  AMC Networks is a global entertainment company that owns and operates several distinctive
+  cable television brands including AMC, BBC America, IFC, Sundance TV, and We TV,
+  plus streaming services.
