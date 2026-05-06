@@ -1,17 +1,13 @@
 specification: FinOps Framework
 specificationVersion: '1.0'
-alignedWith:
-  framework: FinOps Foundation Framework
-  frameworkUrl: https://www.finops.org/framework/
-  dataSpec: FOCUS
-  dataSpecVersion: '1.3'
-  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+schema: https://www.finops.org/framework/
 provider: AMC Networks
 providerId: amc-networks
-publisherName: AMC Networks
-serviceCategory: API
+publisherName: AMC Networks Inc.
+serviceCategory: Media & Entertainment
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Entertainment
   - Streaming
@@ -20,115 +16,65 @@ tags:
   - Media
   - FAST Channels
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the AMC Networks API surface. Provides a FOCUS-aligned mapping
-  for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
-principles:
-  - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
-  - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
-  - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
-  - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+description: >-
+  FinOps scaffold for AMC Networks. The company does not publish a public API billing surface; advertising and affiliate engagements are invoiced per negotiated insertion order or affiliate agreement. FOCUS mappings remain conceptual until a metered API offering is published.
+notes: >-
+  AMC Networks does not publish a public API developer portal with documented pricing, rate limits, or quotas. Affiliate access is gated via the affiliate portal and Audience+/AMCN Outcomes ad-tech engagements are negotiated per-deal. Reconcile when public API pricing is published.
+sources:
+  - https://www.amcnetworks.com/
+  - https://affiliate.amcnetworks.com/
+  - https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 billingModel:
-  pricingCategory: Usage-Based
-  billingFrequency: Monthly
+  pricingCategory: Enterprise / Bilateral
+  billingFrequency: Per-Contract
   billingCurrency: USD
   chargeCategories:
-    - Usage
     - Purchase
+    - Usage
     - Tax
-    - Credit
     - Adjustment
-  chargeFrequency: Recurring
 focusColumns:
   ServiceName: AMC Networks
-  ServiceCategory: Developer Tools / API
+  ServiceCategory: Media & Entertainment
   ProviderName: AMC Networks
-  PublisherName: AMC Networks
-  InvoiceIssuerName: AMC Networks
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PublisherName: AMC Networks Inc.
+  InvoiceIssuerName: AMC Networks Inc.
   BillingCurrency: USD
-  ChargeCategory: Usage
+  ChargeCategory: Purchase
 meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
+  - name: contracted_engagement
+    description: >-
+      Placeholder meter for engagements settled outside a metered API. Real
+      meters cannot be enumerated until AMC Networks publishes a metered
+      API billing surface.
+    unit: varies
     aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
-    aggregation: sum
-    dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-apis:
-  - name: AMC Networks
-    baseURL: https://www.amcnetworks.com
-    tags:
-      - Entertainment
-      - Streaming
-      - Cable Television
-      - Advertising
-    serviceName: AMC Networks
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+principles:
+  - name: Visibility
+    description: >-
+      Without a public usage API, consumers must rely on contract reporting,
+      invoice line items, and any tenant dashboards provided under the
+      partner agreement.
+  - name: Allocation
+    description: >-
+      Allocate spend by purchase order, contract identifier, or business unit
+      receiving the AMC Networks service. Tag at the procurement layer, not
+      the API call layer.
+  - name: Optimization
+    description: >-
+      Optimization levers live in commercial negotiation (volume commitments,
+      term length, scope) rather than in API-level caching or throttling.
+  - name: Accountability
+    description: >-
+      Procurement and the business owner of the AMC Networks relationship own
+      the spend; finance reviews invoice lines on the contract cadence.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
