@@ -45,6 +45,8 @@ apis:
         url: https://affiliate.amcnetworks.com/
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/amc-networks
   - type: Website
     url: https://www.amcnetworks.com/
   - type: Portal
