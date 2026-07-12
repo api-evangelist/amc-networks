@@ -46,6 +46,10 @@ apis:
         url: https://affiliate.amcnetworks.com/
 
 common:
+  - type: DomainSecurity
+    url: security/amc-networks-domain-security.yml
+  - type: Blog
+    url: https://www.amcglobalmedia.com/feed/
   - type: LinkedIn
     url: https://www.linkedin.com/company/amc-networks
   - type: Website
