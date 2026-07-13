@@ -1,0 +1,21 @@
+{
+  "repo": "amc-networks",
+  "feeds": [
+    {
+      "source": "https://www.amcglobalmedia.com/feed/",
+      "feed_url": "https://www.amcglobalmedia.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://affiliate.amcnetworks.com/",
+      "feed_url": "https://affiliate.amcnetworks.com/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 15
+}
