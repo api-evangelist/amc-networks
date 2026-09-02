@@ -1,14 +1,18 @@
 specification: API Commons Plans
 specificationVersion: '0.1'
 schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
-provider: AMC Networks
+provider: AMC Global Media (formerly AMC Networks)
 providerId: amc-networks
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: false
+generated: '2026-09-02'
+modified: '2026-09-02'
+method: searched
+source: >-
+  https://www.amcglobalmedia.com/ (corporate site, sitemap walked 2026-09-02),
+  https://connect.amcglobalmedia.com/ (ad sales), https://affiliate.amcnetworks.com/
+  (affiliate portal, login-gated)
+reconciled: true
+plan_count: 0
 tags:
   - Entertainment
   - Streaming
@@ -17,33 +21,32 @@ tags:
   - Media
   - FAST Channels
 description: >-
-  AMC Networks does not publish public API plans or pricing. Affiliate, advertising (Audience+, AMCN Outcomes), and content licensing engagements are negotiated directly with the company. This artifact remains a scaffold pending publication of a public API commercial offering.
+  AMC Global Media publishes NO API plans and NO API pricing of any kind. Its full
+  public page inventory was walked from the WordPress sitemap on 2026-09-02 and
+  contains no developer, API, pricing or plans page. Commercial engagement is
+  bilateral: affiliate distribution is negotiated through a login-gated partner
+  portal, advertising (Audience+ segmentation, AMCN Outcomes measurement) is booked
+  through the Connect ad-sales route, and broadcast delivery is contracted through
+  AMC B&T Technical Services. plan_count is 0 because the provider publishes zero
+  plans, not because none were looked for.
 notes: >-
-  AMC Networks does not publish a public API developer portal with documented pricing, rate limits, or quotas. Affiliate access is gated via the affiliate portal and Audience+/AMCN Outcomes ad-tech engagements are negotiated per-deal. Reconcile when public API pricing is published.
-sources:
-  - https://www.amcnetworks.com/
-  - https://affiliate.amcnetworks.com/
-plans:
-  - id: amc-networks-overview
-    name: AMC Networks - Pricing Overview
-    type: enterprise
-    description: >-
-      Placeholder plan reflecting that AMC Networks does not publish a public,
-      machine-readable API price list. Pricing is bespoke per engagement.
-    entries:
-      - label: API Access
-        name: api_access
-        type: flat
-        metric: varies
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: contact sales
-        userMultiplied: false
-    elements:
-      - name: Negotiated Access
-      - name: Bilateral Agreement
+  Consumer subscription pricing for AMC+, Acorn TV, Shudder, HIDIVE and ALLBLK exists
+  on the individual streaming brand sites, but that is retail media pricing for
+  end viewers — it is not API plan pricing and is deliberately not recorded here.
+evidence:
+  - url: https://www.amcglobalmedia.com/
+    status: 200
+    note: Corporate home; no pricing, plans or developer navigation.
+  - url: https://amcglobalmedia.com/sitemap.xml
+    status: 200
+    note: Full page index walked; no /pricing, /plans, /developer or /api page exists.
+  - url: https://connect.amcglobalmedia.com/
+    status: 200
+    note: Ad sales entry point; contact-driven, no published rate card or API tier.
+  - url: https://affiliate.amcnetworks.com/
+    status: 200
+    note: Affiliate portal; login form, terms not public.
+plans: []
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

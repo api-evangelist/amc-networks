@@ -1,13 +1,17 @@
 aid: amc-networks
-name: AMC Networks
+name: AMC Global Media
 description: >-
-  AMC Networks is a global entertainment company that owns and operates
-  distinctive cable television and streaming brands including AMC, BBC America,
-  IFC, Sundance TV, and We TV, as well as the AMC+ streaming service. The
-  company operates 33 FAST channels across 22 platforms and delivers digital
-  advertising through its Audience+ data platform. AMC Networks provides
-  affiliate partnership services, advertising solutions, and streaming content
-  distribution through its network of cable and digital properties.
+  AMC Global Media Inc. (NASDAQ: AMCX), known as AMC Networks until its 2026
+  rebrand, is a global entertainment company that owns and operates AMC, BBC
+  America, IFC, SundanceTV and We TV, the AMC+, Acorn TV, Shudder, Sundance Now,
+  HIDIVE and ALLBLK streaming services, AMC Studios, IFC Films and AMC Networks
+  International. It distributes 33 FAST channels across 22 platforms and sells
+  advertising through its Audience+ audience data platform and AMCN Outcomes
+  measurement product. The company publishes no public developer program and no
+  machine-readable API contract: affiliate distribution runs through a login-gated
+  partner portal, advertising is booked through sales, and broadcast delivery is
+  contracted through its Broadcasting & Technology group. The legacy domain
+  www.amcnetworks.com now redirects to www.amcglobalmedia.com.
 type: Index
 deliveryModel:
   model: unknown
@@ -21,17 +25,19 @@ deliveryModel:
   generated: '2026-08-28'
   method: derived
 accessModel:
-  pricing: unknown
-  onboarding: unknown
+  pricing: none-published
+  onboarding: sales
   trial: false
   try_now: false
   public: false
-  label: Unknown
-  confidence: low
+  label: No public API; commercial engagement is bilateral through affiliate or ad sales
+  confidence: high
   source:
   - plans
-  generated: '2026-07-22'
-  method: derived
+  - https://www.amcglobalmedia.com/
+  - https://connect.amcglobalmedia.com/
+  generated: '2026-09-02'
+  method: searched
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amc-networks.png
 tags:
   - Entertainment
@@ -40,97 +46,159 @@ tags:
   - Advertising
   - Media
   - FAST Channels
+  - Broadcasting
+  - Content Licensing
   - Fortune 1000
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amc-networks/refs/heads/main/apis.yml
 created: '2026-03-23'
-modified: '2026-04-19'
+modified: '2026-09-02'
 specificationVersion: '0.23'
 apis:
   - aid: amc-networks:amc-networks
-    name: AMC Networks
+    name: AMC Global Media
     description: >-
-      AMC Networks delivers entertainment content through cable networks and
-      streaming platforms. Affiliate partners access marketing materials,
-      launch documents, and technical resources through the affiliate portal.
-      Advertisers engage with AMC Networks through the Audience+ data
-      platform and AMCN Outcomes for campaign measurement.
-    humanURL: https://www.amcnetworks.com/
-    baseURL: https://www.amcnetworks.com
+      AMC Global Media delivers entertainment content through cable networks,
+      FAST channels and subscription streaming platforms. There is no public API,
+      developer portal or machine-readable contract. Affiliate partners access
+      marketing materials, key art, social toolkits, legal certifications and
+      technical launch documents through a login-gated affiliate portal.
+      Advertisers engage through the Connect ad-sales route, using the Audience+
+      data platform for segmentation and AMCN Outcomes for campaign measurement.
+      Broadcast origination, encoding and satellite delivery are contracted
+      through AMC Broadcasting & Technology.
+    humanURL: https://www.amcglobalmedia.com/
+    baseURL: https://www.amcglobalmedia.com
     tags:
       - Entertainment
       - Streaming
       - Cable Television
       - Advertising
     properties:
-      - type: Documentation
-        url: https://www.amcnetworks.com/
-      - type: Portal
+      - type: AffiliatePortal
         url: https://affiliate.amcnetworks.com/
+      - type: Support
+        url: https://www.amcglobalmedia.com/contact-us/
 
 common:
   - type: DomainSecurity
     url: security/amc-networks-domain-security.yml
+  - type: LLMsTxt
+    url: llms/amc-networks-llms.txt
+  - type: RateLimits
+    url: rate-limits/amc-networks-rate-limits.yml
+  - type: Plans
+    url: plans/amc-networks-plans-pricing.yml
+  - type: FinOps
+    url: finops/amc-networks-finops.yml
   - type: Blog
     url: https://www.amcglobalmedia.com/feed/
   - type: LinkedIn
-    url: https://www.linkedin.com/company/amc-networks
+    url: https://www.linkedin.com/company/amc-global-media
   - type: Website
-    url: https://www.amcnetworks.com/
-  - type: Portal
+    url: https://www.amcglobalmedia.com/
+  - type: AffiliatePortal
     url: https://affiliate.amcnetworks.com/
+  - type: Support
+    url: https://www.amcglobalmedia.com/contact-us/
+  - type: TermsOfService
+    url: https://www.amcglobalmedia.com/terms-of-use/
+  - type: PrivacyPolicy
+    url: https://www.amcglobalmedia.com/privacy-policy/
   - type: Features
     data:
       - name: Audience+ Data Platform
         description: >-
           Proprietary data platform for creating audience segments and reaching
           viewers across linear and streaming properties with targeted advertising.
+          Accessed through AMC ad sales, not through a self-serve API.
       - name: AMCN Outcomes
         description: >-
-          First-to-market outcome-based advertising measurement tool enabling
-          brands to gauge consumer response to ad spending across AMC Networks
-          properties.
+          Outcome-based advertising measurement product enabling brands to gauge
+          consumer response to ad spending across AMC Global Media properties.
       - name: FAST Channels
         description: >-
           33 free ad-supported streaming television channels distributed across
           22 platforms, providing digital advertising inventory.
-      - name: AMC+ Streaming
+      - name: Streaming Services
         description: >-
-          Subscription streaming service delivering AMC Networks original content,
-          international programming, and exclusive series with ad-supported tiers.
+          AMC+, Acorn TV, Shudder, Sundance Now, HIDIVE and ALLBLK subscription
+          streaming services. HIDIVE runs on the third-party DICE platform
+          (dce-frontoffice.imggaming.com), so its runtime API belongs to that
+          vendor rather than to AMC.
       - name: Affiliate Portal
         description: >-
-          Partner portal providing marketing materials, key art, promotional
-          videos, social toolkits, legal certifications, and technical launch
-          documents for cable affiliate partners.
+          Login-gated partner portal providing marketing materials, key art,
+          promotional videos, social toolkits, legal certifications, and technical
+          launch documents for cable and streaming distribution partners.
+      - name: Broadcasting and Technology Services
+        description: >-
+          Program origination, encoding, satellite uplinking and studio production
+          for AMC and third-party networks; transmission requests are handled
+          through a credentialed operations portal, not an API.
       - name: Contextual AI Advertising
         description: >-
-          AI-powered content indexing of AMC Networks' full original content
-          library enabling contextual ad placement adjacent to relevant scenes.
+          AI-powered content indexing of AMC's original content library enabling
+          contextual ad placement adjacent to relevant scenes.
   - type: UseCases
     data:
-      - name: Cable Affiliate Distribution
+      - name: Cable and Streaming Affiliate Distribution
         description: >-
-          Cable operators access marketing and technical resources for AMC
-          Networks channel launches and affiliate partnerships.
+          Distributors access marketing and technical resources for AMC channel
+          launches and affiliate partnerships through the gated affiliate portal.
       - name: Digital Advertising
         description: >-
-          Advertisers reach audiences across AMC Networks' linear and streaming
+          Advertisers reach audiences across AMC's linear, FAST and streaming
           properties using Audience+ targeting and AMCN Outcomes measurement.
-      - name: Streaming Content Access
+      - name: Content Licensing and Streaming Distribution
         description: >-
-          Consumers access AMC Networks content via AMC+ subscription streaming
-          and FAST channels on connected TV platforms.
+          Platforms and international broadcasters license AMC Studios and AMC
+          Networks International content and FAST channel feeds.
   - type: Integrations
     data:
+      - name: Netflix
+        description: >-
+          Expanded global streaming licensing relationship announced with AMC's
+          Q2 2026 results, bringing AMC titles to Netflix.
       - name: Fandango
         description: >-
-          AMC Networks expanded its advertising initiative to theatrical
-          moviegoing via a partnership with Fandango.
+          AMC expanded its advertising initiative to theatrical moviegoing via a
+          partnership with Fandango.
       - name: Runway
         description: >-
           AI partnership with Runway for content creation and advertising
           enhancement capabilities.
+      - name: DICE (IMG Arena)
+        description: >-
+          HIDIVE's streaming delivery runs on the third-party DICE platform, a
+          vendor-operated surface rather than an AMC-published API.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-02'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AMC Global Media's full public page inventory was walked from its WordPress
+    sitemap and contains no developer, API or documentation page at all; the only
+    JSON served on an AMC host is the incidental WordPress REST root at
+    /wp-json/, and every /openapi.json, /swagger.json and /.well-known/ path
+    404s on www.amcglobalmedia.com, www.amcnetworks.com and
+    affiliate.amcnetworks.com.
+  evidence:
+    - url: https://amcglobalmedia.com/sitemap.xml
+      status: 200
+    - url: https://www.amcglobalmedia.com/openapi.json
+      status: 404
+    - url: https://www.amcglobalmedia.com/.well-known/api-catalog
+      status: 404
+    - url: https://affiliate.amcnetworks.com/openapi.json
+      status: 404
+    - url: https://www.amcglobalmedia.com/llms.txt
+      status: 404
+  checked: '2026-09-02'

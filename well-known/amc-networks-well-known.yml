@@ -1,0 +1,125 @@
+specification: API Commons Well-Known
+specificationVersion: '0.1'
+provider: AMC Global Media (formerly AMC Networks)
+providerId: amc-networks
+generated: '2026-09-02'
+method: probed
+source: >-
+  Live anonymous HTTPS probes of every host named in apis.yml plus the corporate
+  host the legacy domain now redirects to (www.amcnetworks.com 301s to
+  www.amcglobalmedia.com) and the consumer streaming host.
+description: >-
+  Probe record for the /.well-known/ surface of every AMC Global Media host in
+  this profile. Every path returned 404 on every host. NO WellKnown or SecurityTxt
+  pointer is emitted in apis.yml because nothing was served — this file records a
+  verified absence, not a presence.
+hosts:
+  - host: www.amcnetworks.com
+    note: 301 redirects to www.amcglobalmedia.com; probed at its own origin.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: www.amcglobalmedia.com
+    note: Current corporate site (WordPress). Serves robots.txt and a sitemap; no /.well-known documents.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: affiliate.amcnetworks.com
+    note: Affiliate partner portal; login-gated. robots.txt also 404s.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: www.amcplus.com
+    note: AMC+ consumer streaming site.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+  - host: www.hidive.com
+    note: >-
+      HIDIVE (AMC-owned anime service). Returns HTTP 200 for EVERY /.well-known/
+      path, but the body is the same SPA HTML shell in all cases — a catch-all,
+      not a document. Recorded as a miss. The service runs on the third-party
+      DICE/IMG Arena platform (dce-frontoffice.imggaming.com), so any live API
+      there belongs to that vendor, not to AMC.
+    documents:
+      - path: /.well-known/agent-card.json
+        status: 200
+        file: null
+        verdict: soft-hit-html-shell
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        verdict: soft-hit-html-shell
+  - host: www.shudder.com
+    note: Shudder consumer streaming site.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -1,14 +1,17 @@
 specification: API Commons Rate Limits
 specificationVersion: '0.1'
 schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
-provider: AMC Networks
+provider: AMC Global Media (formerly AMC Networks)
 providerId: amc-networks
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: false
+generated: '2026-09-02'
+modified: '2026-09-02'
+method: searched
+source: >-
+  https://www.amcglobalmedia.com/ (corporate site, sitemap walked 2026-09-02),
+  https://affiliate.amcnetworks.com/, https://connect.amcglobalmedia.com/
+reconciled: true
+limit_count: 0
 tags:
   - Entertainment
   - Streaming
@@ -18,31 +21,28 @@ tags:
   - FAST Channels
   - Rate Limiting
 description: >-
-  AMC Networks does not publish public API rate limit documentation. Any partner integrations operate under terms negotiated through the affiliate or advertising sales channels. This artifact remains a scaffold pending publication of public rate limit documentation.
+  AMC Global Media documents NO API rate limits, quotas, throttling behaviour or
+  rate-limit response headers, because it publishes no public API. There is no
+  developer portal, no API reference and no machine-readable contract on any host
+  the company controls, so there is nothing to rate limit and nothing published to
+  record. limit_count is 0 as an honest measured zero.
 notes: >-
-  AMC Networks does not publish a public API developer portal with documented pricing, rate limits, or quotas. Affiliate access is gated via the affiliate portal and Audience+/AMCN Outcomes ad-tech engagements are negotiated per-deal. Reconcile when public API pricing is published.
-sources:
-  - https://www.amcnetworks.com/
-  - https://affiliate.amcnetworks.com/
-responseCodes:
-  throttled: 429
-  serviceUnavailable: 503
-limits:
-  - name: Undocumented - bilateral agreement
-    scope: contract
-    metric: varies
-    limit: 'see partner agreement; not publicly documented'
-policies:
-  - name: Documentation Status
-    description: >-
-      AMC Networks does not publish public per-second or per-minute API rate
-      limits. Throughput, concurrency, and burst behavior are governed by the
-      relevant partner, supplier, or merchant agreement.
-  - name: Backoff Strategy
-    description: >-
-      Where any HTTP API is exposed, clients should implement exponential
-      backoff with jitter and honor any Retry-After header returned on 429
-      or 503 responses.
+  If AMC Global Media ever publishes a partner or advertising API, the values worth
+  capturing are the per-key window and limit, the burst allowance, the exhaustion
+  status code, and the RateLimit-* / Retry-After response headers. None of those are
+  published today.
+evidence:
+  - url: https://www.amcglobalmedia.com/
+    status: 200
+    note: No developer or API documentation section.
+  - url: https://www.amcglobalmedia.com/openapi.json
+    status: 404
+  - url: https://affiliate.amcnetworks.com/
+    status: 200
+    note: Login-gated affiliate portal; no public technical reference.
+responseCodes: {}
+limits: []
+policies: []
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
