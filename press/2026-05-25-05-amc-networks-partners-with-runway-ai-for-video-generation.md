@@ -1,7 +1,9 @@
 ---
 title: AMC Networks partners with Runway AI for video generation
 url: https://www.facebook.com/groups/glblfilmmakers/posts/10161468723473424/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"AMC Networks" press release artificial intelligence'
 position: 5
 source: serpapi-google

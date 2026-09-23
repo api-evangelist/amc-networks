@@ -1,7 +1,9 @@
 ---
 title: AMC Networks enlists AI startup
 url: https://www.linkedin.com/news/story/amc-networks-enlists-ai-startup-6889537/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"AMC Networks" press release artificial intelligence'
 position: 3
 source: serpapi-google

@@ -1,7 +1,9 @@
 ---
 title: 'PRISM - AMC Networks Success Story: Adopting GenAI to ...'
 url: https://www.nabshow.com/video/prism-amc-networks-success-story-adopting-genai-to-streamline-workflow/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"AMC Networks" press release artificial intelligence'
 position: 1
 source: serpapi-google
