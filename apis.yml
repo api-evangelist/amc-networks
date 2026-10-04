@@ -56,6 +56,7 @@ modified: '2026-09-02'
 specificationVersion: '0.23'
 apis:
   - aid: amc-networks:amc-networks
+    x-published: false
     name: AMC Global Media
     description: >-
       AMC Global Media delivers entertainment content through cable networks,
@@ -68,7 +69,6 @@ apis:
       Broadcast origination, encoding and satellite delivery are contracted
       through AMC Broadcasting & Technology.
     humanURL: https://www.amcglobalmedia.com/
-    baseURL: https://www.amcglobalmedia.com
     tags:
       - Entertainment
       - Streaming
