@@ -52,7 +52,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amc-networks/refs/heads/main/apis.yml
 created: '2026-03-23'
-modified: '2026-09-02'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
   - aid: amc-networks:amc-networks
@@ -81,6 +81,8 @@ apis:
         url: https://www.amcglobalmedia.com/contact-us/
 
 common:
+  - url: https://www.amcglobalmedia.com/news/
+    type: Blog
   - type: DomainSecurity
     url: security/amc-networks-domain-security.yml
   - type: LLMsTxt
