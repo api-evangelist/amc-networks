@@ -1,4 +1,4 @@
-# AMC Networks (amc-networks)
+# AMC Global Media
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,71 +64,105 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AMC Networks is a global entertainment company that owns and operates distinctive cable television and streaming brands including AMC, BBC America, IFC, Sundance TV, and We TV, as well as the AMC+ streaming service. The company operates 33 FAST channels across 22 platforms and delivers digital advertising through its Audience+ data platform.
+AMC Global Media Inc. (NASDAQ: AMCX), known as AMC Networks until its 2026 rebrand, is a global entertainment company that owns and operates AMC, BBC America, IFC, SundanceTV and We TV, the AMC+, Acorn TV, Shudder, Sundance Now, HIDIVE and ALLBLK streaming services, AMC Studios, IFC Films and AMC Networks International. It distributes 33 FAST channels across 22 platforms and sells advertising through its Audience+ audience data platform and AMCN Outcomes measurement product. The company publishes no public developer program and no machine-readable API contract: affiliate distribution runs through a login-gated partner portal, advertising is booked through sales, and broadcast delivery is contracted through its Broadcasting & Technology group. The legacy domain www.amcnetworks.com now redirects to www.amcglobalmedia.com.
 
-**URL:** [https://www.amcnetworks.com/](https://www.amcnetworks.com/)
+**Areas:** Entertainment · Streaming · Cable Television · Advertising · Media · FAST Channels · Broadcasting · Content Licensing · Fortune 1000
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## AMC Global Media on APIs.io
 
-## Tags
+Everything profiled for AMC Global Media is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amc-networks/](https://apis.io/providers/amc-networks/)** — or go straight to one of the APIs or properties below.
 
- - Entertainment, Streaming, Cable Television, Advertising, Media, FAST Channels
+### APIs (1)
 
-## Timestamps
+- [AMC Global Media](https://apis.io/apis/amc-networks/amc-networks/) — AMC Global Media delivers entertainment content through cable networks, FAST channels and subscription streaming platforms. There is no public API,…
 
-- **Created:** 2026-03-23
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### AMC Networks
+#### Security (1)
 
-AMC Networks delivers entertainment content through cable networks and streaming platforms. Affiliate partners access marketing materials, launch documents, and technical resources through the affiliate portal.
+Authentication, trust centre, and vulnerability disclosure.
 
-**Human URL:** [https://www.amcnetworks.com/](https://www.amcnetworks.com/)
+- [Amc Networks Domain Security](https://apis.io/security/amc-networks/amc-networks-domain-security/)
 
-#### Tags
+#### Plans and pricing (1)
 
- - Entertainment, Streaming, Cable Television, Advertising
+Published plans, tiers and prices.
 
-#### Properties
+- [Amc Networks Plans Pricing](https://apis.io/plans/amc-networks/amc-networks-plans-pricing/)
 
-- [Documentation](https://www.amcnetworks.com/)
-- [Portal](https://affiliate.amcnetworks.com/)
+#### Rate limits (1)
 
-## Common Properties
+Published request limits.
 
-- [Website](https://www.amcnetworks.com/)
-- [Portal](https://affiliate.amcnetworks.com/)
+- [Amc Networks Rate Limits](https://apis.io/rate-limits/amc-networks/amc-networks-rate-limits/)
 
-## Features
+#### FinOps (1)
 
-| Name | Description |
-|------|-------------|
-| Audience+ Data Platform | Proprietary data platform for creating audience segments and reaching viewers across linear and streaming properties with targeted advertising. |
-| AMCN Outcomes | First-to-market outcome-based advertising measurement tool enabling brands to gauge consumer response to ad spending across AMC Networks properties. |
-| FAST Channels | 33 free ad-supported streaming television channels distributed across 22 platforms, providing digital advertising inventory. |
-| AMC+ Streaming | Subscription streaming service delivering AMC Networks original content, international programming, and exclusive series with ad-supported tiers. |
-| Affiliate Portal | Partner portal providing marketing materials, key art, promotional videos, social toolkits, legal certifications, and technical launch documents for cable affiliate partners. |
-| Contextual AI Advertising | AI-powered content indexing of AMC Networks' full original content library enabling contextual ad placement adjacent to relevant scenes. |
+What the API costs to run, by operation.
 
-## Use Cases
+- [Amc Networks Finops](https://apis.io/finops/amc-networks/amc-networks-finops/)
 
-| Name | Description |
-|------|-------------|
-| Cable Affiliate Distribution | Cable operators access marketing and technical resources for AMC Networks channel launches and affiliate partnerships. |
-| Digital Advertising | Advertisers reach audiences across AMC Networks' linear and streaming properties using Audience+ targeting and AMCN Outcomes measurement. |
-| Streaming Content Access | Consumers access AMC Networks content via AMC+ subscription streaming and FAST channels on connected TV platforms. |
+## Where to find this API
 
-## Integrations
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-| Name | Description |
-|------|-------------|
-| Fandango | AMC Networks expanded its advertising initiative to theatrical moviegoing via a partnership with Fandango. |
-| Runway | AI partnership with Runway for content creation and advertising enhancement capabilities. |
+- [Website](https://www.amcglobalmedia.com/)
+- [Support](https://www.amcglobalmedia.com/contact-us/)
+- [Blog](https://www.amcglobalmedia.com/news/)
+- [Terms of service](https://www.amcglobalmedia.com/terms-of-use/)
+- [Privacy policy](https://www.amcglobalmedia.com/privacy-policy/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 11.1** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amc-networks/](https://apis.io/providers/amc-networks/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AMC Global Media: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amc-networks/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
